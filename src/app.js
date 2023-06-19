@@ -1,6 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { getAnalytics } from "firebase/analytics";
 import { initializeApp } from "firebase/app";
+import React from 'react';
+import * as ReactDOM from 'react-dom';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -18,4 +20,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const rootDomElement = document.getElementById('root');
+const root = ReactDOM.findDOMNode(rootDomElement);
+const appCode = React.createElement('h1',null,'hola mundo')
 const analytics = getAnalytics(app);
